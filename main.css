@@ -1,0 +1,134 @@
+body {
+    font-family: monospace;
+}
+
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+  }
+  
+  .list {
+    list-style: square;
+  }
+  
+  #msg {
+    font-family: monospace;
+  }
+
+.nickname {
+  font-family: Georgia;
+  display: flex; /* Crea un contenitore flessibile per l'icona */
+  align-items: center; /* Allinea verticalmente l'icona al centro */
+  justify-content: center; /* Allinea orizzontalmente l'icona al centro */
+  padding-top: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.5;
+/*font-family: Georgia;
+text-align: center;
+padding-top: 50px;
+margin: auto;
+color: rgb(255, 255, 255);
+font-weight: 700;
+font-size: 21px;
+line-height: 1.5;
+text-overflow: ellipsis;
+max-width: 100%;
+white-space: nowrap;
+overflow: hidden;*/
+}
+
+.bkg {
+    color: #ffffff;
+    background: #654ada;
+}
+
+
+.container {
+    position: relative;
+}
+
+.round-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+  }
+
+
+
+  .stripe-list {
+    list-style-type: none; /* Rimuove i punti della lista */
+    padding: 0; /* Rimuove lo spazio tra il contenitore e i bordi */
+    margin: 0;
+    text-align: center; /* Centra i link all'interno del contenitore */
+  }
+  
+
+  .center-stripe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stripe {
+    text-align: center;
+    display: inline-block;;
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: #000; /* Imposta il colore del testo */
+    padding: 20px; /* Imposta lo spazio tra il testo e i bordi della striscia */
+    width: 40%; /* Imposta la larghezza della striscia */
+    margin-bottom: 15px; /* Imposta lo spazio tra le strisce */
+  }
+  
+  .round-edge {
+    border-radius: 20px; /* Crea un bordo tondeggiante */
+  }
+
+  .stripe:link {
+    background: rgb(3, 61, 90, 0.5); /* Imposta il colore di sfondo della striscia al passaggio del mouse */
+    color: #fff; /* Imposta il colore del testo */
+    /*border: 2px solid rgb(255, 255, 255);*/
+  }
+  
+  .stripe:hover {
+    background-color: #006699; /* Imposta il colore di sfondo della striscia al passaggio del mouse */
+    color: #fff; /* Imposta il colore del testo al passaggio del mouse */
+  }
+
+
+#bio {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /*padding-bottom: 10px;*/
+}
+
+
+.center-icon-container {
+    display: flex; /* Crea un contenitore flessibile per l'icona */
+    align-items: center; /* Allinea verticalmente l'icona al centro */
+    justify-content: center; /* Allinea orizzontalmente l'icona al centro */
+    padding-bottom: 20px;
+  }
+  
+  .icon-link {
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    color: rgb(255, 255, 255); /* Imposta il colore dell'icona */
+  }
+
+
+
+
+.TextAlignCenter {
+  display: flex; /* Crea un contenitore flessibile per l'icona */
+  align-items: center; /* Allinea verticalmente l'icona al centro */
+  justify-content: center; /* Allinea orizzontalmente l'icona al centro */
+  padding-bottom: 20px;
+  /*padding-right: 100;*/
+}
