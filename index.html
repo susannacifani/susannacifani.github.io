@@ -1,114 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>susannacifani - Link in Bio</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="https://kit.fontawesome.com/dcda5025c9.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css"/>
-    <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 
-    <style>
-        .card {
-            border-radius: 50px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            height: 80px;
-        }
-        .custom-card {
-            background-color: rgba(255, 255, 255, 0.2); /* Colore di sfondo bianco trasparente */
-            border: 2px solid rgba(255, 255, 255); /* Bordo contornato */
-            display: flex;
-        }
-        .card-link {
-            text-decoration: none; /* Rimuove la sottolineatura */
-            color: inherit; /* Mantiene il colore del testo predefinito */
-        }
+<head>
+  <meta charset="utf-8">
+  <title>susannacifani - Link in Bio</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/dcda5025c9.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" />
+  <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 
+  <style>
+    .card {
+      border-radius: 50px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      height: 80px;
+    }
 
-        
-    </style>
+    .custom-card {
+      background-color: rgba(255, 255, 255, 0.2);
+      /* Colore di sfondo bianco trasparente */
+      border: 2px solid rgba(255, 255, 255);
+      /* Bordo contornato */
+      display: flex;
+    }
 
-  </head>
-  <body class="bkg">
-    <div class="container">
-        <img src="profile-pic.jpeg" width="91" height="91" class="round-img">
-    </div>
-    <h1 class="nickname">susanna</h1>
-    <p id="bio">✧༝┉˚*❋ sharing products I like ✧༝┉˚*❋</p>
+    .card-link {
+      text-decoration: none;
+      /* Rimuove la sottolineatura */
+      color: inherit;
+      /* Mantiene il colore del testo predefinito */
+    }
+  </style>
 
-    <!--
-    <div class="container icon-link">
-        <div class="d-flex justify-content-center">
-            <a href="https://tiktok.com/@susanna.exe" class="icon-link mx-3">
-                <i class="fa-brands fa-tiktok" style="font-size:25px;"></i>
-            </a>
-            <a href="https://instagram.com/susannacifani" class="icon-link mx-3">
-                <i class="fa-brands fa-instagram" style="font-size:30px;"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCLhRX8BIhECfgz1uQEJmbIA" class="icon-link mx-3">
-                <i class="fa-brands fa-youtube" style="font-size:30px;"></i>
-            </a>
-        </div>
-    </div>
-    -->
+</head>
 
+<body class="bkg">
+  <div class="container">
+    <img src="profile-pic.jpeg" width="91" height="91" class="round-img">
+  </div>
+  <h1 class="nickname">susanna</h1>
+  <p id="bio">✧༝┉˚*❋ sharing products I like ✧༝┉˚*❋</p>
 
+  <div class="container">
+    <div class="row d-flex flex-column justify-content-center align-items-center">
+      <div class="col-12 col-md-6">
+        Beauty Products
 
-    <div class="container">
-        <div class="row d-flex flex-column justify-content-center align-items-center">
-            <div class="col-6">
-                Beauty Products
-    
-                <div class="row card-deck">
-                    <a href="https://www.example.com" class="card-link">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="rounded-circle mr-3" style="width: 50px; height: 50px; overflow: hidden;">
-                                            <img src="profile-pic.jpeg" alt="Immagine" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <p class="card-text">Testo della carta</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+        <div class="row card-deck">
+          <a href="https://www.example.com" class="card-link col-12">
+            <div class="card custom-card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-4 col-md-2">
+                    <div class="rounded-circle mr-3" style="width: 50px; height: 50px; overflow: hidden;">
+                      <img src="profile-pic.jpeg" alt="Immagine" style="width: 100%;">
+                    </div>
+                  </div>
+                  <div class="col-8 col-md-10">
+                    <p class="card-text">Testo della carta</p>
+                  </div>
                 </div>
-
-
-                <div class="row card-deck">
-                    <a href="https://www.example.com" class="card-link">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-12">
-                                        <div class="rounded-circle mr-md-3 mb-3 mb-md-0" style="width: 45px; height: 45px; overflow: hidden;">
-                                            <img src="yesstyle-logo.png" alt="Immagine" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-12 text-center">
-                                        <p class="card-text" style="margin-bottom: 3px; font-size: 15px; margin-left: -200px;">Become a Yesstyle Influencer </p>
-                                        <p class="card-subtext" style="margin-bottom: 4px; font-size: 12px; margin-left: -200px;">Discount code 10%: SUSANNA01</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
+              </div>
             </div>
+          </a>
         </div>
+
+        <div class="row card-deck">
+          <a href="https://www.example.com" class="card-link col-12">
+            <div class="card custom-card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-4 col-md-2">
+                    <div class="rounded-circle mr-3 mb-3 mb-md-0" style="width: 45px; height: 45px; overflow: hidden;">
+                      <img src="yesstyle-logo.png" alt="Immagine" style="width: 100%;">
+                    </div>
+                  </div>
+                  <div class="col-8 col-md-10 text-center">
+                    <p class="card-text" style="margin-bottom: 3px; font-size: 15px;">Become a Yesstyle Influencer </p>
+                    <p class="card-subtext" style="margin-bottom: 4px; font-size: 12px;">Discount code 10%: SUSANNA01</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-    
+  </div>
+</body>
 
-
-
-
-
-    </body>
+</html>
