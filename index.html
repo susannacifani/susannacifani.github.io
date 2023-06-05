@@ -44,6 +44,7 @@
       align-items: center;
       height: 100%;
     }
+
     .card-img-container {
       display: flex;
       justify-content: center;
@@ -51,33 +52,14 @@
       height: 100%;
     }
 
-    #linksbutton {
-    max-width: 580px;
-    width: auto;
-    display: block;
-    margin: 27px auto;
+    .card-img-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
-    .links {
-        display: block;
-            background-color: rgba(255, 255, 255, 0.0 );
-        color: var(--color-text);
-        font-family: var(--font);
-        text-align: center;
-        margin-bottom: 8px;
-        padding: 17px;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: all .25s cubic-bezier(.08, .59, .29, .99);
-        border: solid var(--color-main) 2px;
-    }
 
-    .links:hover {
-        background-color: #fff;
-        color: #000;
-        border: solid var(--color-main) 2px;
-    }
+
 
 
 
@@ -93,66 +75,51 @@
   <p id="bio">✧༝┉˚*❋ sharing products I like ✧༝┉˚*❋</p>
 
 
-  <div id="linksbutton">
-    <a class="links" href="https://api.brandbassador.com/s/viprw3" target="_blank" style="border-radius: 15px;">Collabora con i brand</a>
-    <a class="links" href="https://www.twitter.com/vivekartiste" style="border-radius: 15px;">🕊️ &nbsp; Tweet On Twitter (7K+)</a>
-    <a class="links" href="https://www.facebook.com/vivekrajputx" style="border-radius: 15px;">👍 &nbsp;Connect On Facebook (7K+)</a>
-    <a class="links" href="https://www.snapchat.com/add/shadyvivek" style="border-radius: 15px;">👻&nbsp; Add On Snapchat</a>
-    <a class="links" href="https://play.google.com/store/apps/details?id=com.miui.updates" target="_blank" style="border-radius: 15px;">💻 &nbsp; MIUI Updates - Tech News App (50K+)</a>
-    <a class="links" href="https://amzn.to/3k0IHPI" target="_blank" style="border-radius: 15px;">💸 &nbsp; Support Via Amazon</a> 
-  </div>
-
-
-
 
 
   <div class="container">
-    <div class="row d-flex flex-column justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6">
-        <div class="row card-deck">
+        <div class="card-deck">
           <a href="https://api.brandbassador.com/s/viprw3" class="card-link col-12">
             <div class="card custom-card">
-              <div class="card-body">
-                <div class="row d-flex">
-                  <div class="col-1 col-md-1">
-                    <div class="rounded-circle mr-3 mb-3 mb-md-0" style="width: 50px; height: 50px; overflow: hidden;">
-                      <div class="card-img-container text-center">
-                        <img src="brandabas-logo.png" alt="Immagine" style="max-width: 100%; max-height: 100%;">
-                      </div>
-                      
+              <div class="card-body d-flex">
+                <div class="col-1 col-md-1">
+                  <div class="rounded-circle" style="width: 50px; height: 50px; overflow: hidden;">
+                    <div class="card-img-container d-flex justify-content-center align-items-center">
+                      <img src="brandabas-logo.png" alt="Immagine" style="max-width: 100%; max-height: 100%;">
                     </div>
-                    
                   </div>
-                  <div class="col-11 col-md-11">
-                    <p class="card-text single-card-text" style="margin-bottom: 3px; font-size: 15px; text-align: center; font-family: sans-serif;">Collaborate with brands</p>
-                  </div>
+                </div>
+                <div class="col-11 col-md-11">
+                  <p class="card-text single-card-text" style="margin-bottom: 3px; font-size: 15px; text-align: center; font-family: sans-serif;">Collaborate with brands</p>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="row card-deck">
+        <div class="card-deck">
           <a href="https://www.yesstyle.com/en/influencers.html?irirco=SUSANNA01&utm_term=SUSANNA01&utm_medium=infreferral&mcg=influencer&utm_source=influencer&utm_campaign=iriprivate" class="card-link col-12">
             <div class="card custom-card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-1 col-md-1">
-                    <div class="rounded-circle mr-3 mb-3 mb-md-0" style="width: 45px; height: 45px; overflow: hidden;">
-                      <img src="yesstyle-logo.png" alt="Immagine" style="width: 100%;">
+              <div class="card-body d-flex">
+                <div class="col-1 col-md-1">
+                  <div class="rounded-circle" style="width: 50px; height: 50px; overflow: hidden;">
+                    <div class="card-img-container d-flex justify-content-center align-items-center">
+                      <img src="yesstyle-logo.png" alt="Immagine" style="max-width: 100%; max-height: 100%;">
                     </div>
                   </div>
-                  <div class="col-11 col-md-11">
-                    <p class="card-text" style="margin-bottom: 3px; font-size: 15px; text-align: center; font-family: sans-serif;">Become a Yesstyle Influencer </p>
-                    <p class="card-subtext" style="margin-bottom: 4px; font-size: 12px; text-align: center;">Discount code 10%: SUSANNA01</p>
-                  </div>
+                </div>
+                <div class="col-11 col-md-11">
+                  <p class="card-text" style="margin-bottom: 3px; font-size: 15px; text-align: center; font-family: sans-serif;">Become a Yesstyle Influencer </p>
+                  <p class="card-subtext" style="margin-bottom: 4px; font-size: 12px; text-align: center;">Discount code 10%: SUSANNA01</p>
                 </div>
               </div>
             </div>
           </a>
         </div>
-      </div>
-    </div>
+
+  
 
 
     <div class="container">
