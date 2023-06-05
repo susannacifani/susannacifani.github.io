@@ -14,7 +14,8 @@
     .card {
       border-radius: 50px;
       overflow: hidden;
-      margin-bottom: 15px;
+      margin-bottom: 10px; 
+      margin-top: 10px;
       height: 80%;
     }
 
@@ -43,6 +44,13 @@
       align-items: center;
       height: 100%;
     }
+    .card-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
 
   </style>
 
@@ -64,9 +72,12 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-1 col-md-1">
-                    <div class="rounded-circle mr-3 mb-3 mb-md-0" style="width: 45px; height: 45px; overflow: hidden;">
-                      <img src="brandabas-logo.png" alt="Immagine" style="width: 100%;">
+                    <div class="rounded-circle mr-3 mb-3 mb-md-0 single-card-text" style="width: 50px; height: 50px; overflow: hidden;">
+                      <div class="card-img-container">
+                        <img src="brandabas-logo.png" alt="Immagine" style="max-width: 100%; max-height: 100%;">
+                      </div>
                     </div>
+                    
                   </div>
                   <div class="col-11 col-md-11">
                     <p class="card-text single-card-text" style="margin-bottom: 3px; font-size: 15px; text-align: center; font-family: sans-serif;">Collaborate with brands</p>
