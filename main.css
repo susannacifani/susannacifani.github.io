@@ -1,7 +1,8 @@
 body {
-  background-image: url('icons_background/blurred-back.jpeg');
+  /*background-image: url('icons_background/blurred-back.jpeg');
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
+  background: linear-gradient(to bottom, #7e6495, #8c8ccb);
 }
 
 #msg {
