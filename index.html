@@ -17,7 +17,7 @@
   <style>
     .bg-custom-color {
       background-color: #9CAF88;
-      height: 300px;
+      height: 280px;
     }
     .custom-link {
       text-decoration: none;
@@ -26,8 +26,10 @@
       /* Mantiene il colore del testo predefinito */
     }
     .card {
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /*border-radius: 10px;*/
+      border-radius: 0%;
+      border: 0px;
+      box-shadow: 0 4px 6px rgb(156, 175, 136, 0.1);
       /*height: 200px;*/
       /*width: 100px;*/
     }
@@ -36,14 +38,15 @@
       object-fit: cover;
       height: 100px;
       /*width: 100px;*/
+      /*
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 10px;*/
     }
-    .custom-card {
-      width: 8rem;
-      height: 12rem;
+    .custom-card-medium {
+      width: 200px;
+      height: 200px;
     }
 
     @media (max-width: 767px) {
@@ -122,53 +125,24 @@
           <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
 
-
               <div class="carousel-item active">
-
-                <div class="row">
-                  <div class="custom-card-small col-md-4 custom-card mb-0">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-extensions.jpg" class="card-img-top" alt="Immagine 1">
-                    </div>
-                  </div>
-                  <div class="custom-card-small col-md-4 custom-card mb-0">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-shaperx1.jpg" class="card-img-top" alt="Immagine 2">
-                    </div>
-                  </div>
-                  <div class="custom-card-small col-md-4 custom-card mb-0">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-smartwatch.jpg" class="card-img-top" alt="Immagine 3">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="carousel-item">
                 <div class="row">
 
                   <div class="col">
-                    <img src="products_img/caudalie-parfume.png" class="d-block w-100" alt="Image 2">
+                    <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
+                    <!--
                     <div class="carousel-caption">
                       <h5>Titolo 2</h5>
                       <p>Descrizione 2</p>
                     </div>
+                    -->
                   </div>
 
                   <div class="col">
                     <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
-                    <div class="carousel-caption">
-                      <h5>Titolo 2</h5>
-                      <p>Descrizione 2</p>
-                    </div>
                   </div>
                   <div class="col">
                     <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
-                    <div class="carousel-caption">
-                      <h5>Titolo 3</h5>
-                      <p>Descrizione 3</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -176,50 +150,16 @@
                 <div class="row">
                   <div class="col">
                     <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
-                    <div class="carousel-caption">
-                      <h5>Titolo 4</h5>
-                      <p>Descrizione 4</p>
-                    </div>
                   </div>
                   <div class="col">
                     <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
-                    <div class="carousel-caption">
-                      <h5>Titolo 5</h5>
-                      <p>Descrizione 5</p>
-                    </div>
                   </div>
                   <div class="col">
                     <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
-                    <div class="carousel-caption">
-                      <h5>Titolo 6</h5>
-                      <p>Descrizione 6</p>
-                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="carousel-item">
-
-                <div class="row">
-                  <div class="custom-card-small col-md-4 custom-card">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-extensions.jpg" class="card-img-top" alt="Immagine 1">
-                    </div>
-                  </div>
-                  <div class="custom-card-small col-md-4 custom-card">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-shaperx1.jpg" class="card-img-top" alt="Immagine 2">
-                    </div>
-                  </div>
-                  <div class="custom-card-small col-md-4 custom-card">
-                    <div class="card shadow d-flex flex-column">
-                      <img src="products_img/amazon-smartwatch.jpg" class="card-img-top" alt="Immagine 3">
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
 
             </div>
             <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
@@ -235,8 +175,57 @@
 
 
           
-          <p>I miei prodotti preferiti</p>
-          <div class="container">
+          <p style="margin-top: 30px;">I miei prodotti preferiti</p>
+          <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="row">
+
+                  <div class="col">
+                    <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
+                    <!--
+                    <div class="carousel-caption">
+                      <h5>Titolo 2</h5>
+                      <p>Descrizione 2</p>
+                    </div>
+                    -->
+                  </div>
+
+                  <div class="col">
+                    <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
+                  </div>
+                  <div class="col">
+                    <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
+                  </div>
+                  <div class="col">
+                    <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
+                  </div>
+                  <div class="col">
+                    <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </a>
+            <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </a>
+          </div>
+          <!--<div class="container">
             <div class="row">
               <div class="col-4 col-md-4 custom-card">
                 <div class="card shadow d-flex flex-column">
@@ -263,13 +252,19 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 
-
+  <footer class="sticky-footer">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span style="font-size: 12px; margin-top: 10px;">Copyright &copy; Susanna Cifani</span>
+      </div>
+    </div>
+  </footer>
 
 
 </body>
