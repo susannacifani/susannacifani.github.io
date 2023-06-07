@@ -2,7 +2,7 @@ body {
   /*background-image: url('icons_background/blurred-back.jpeg');
   background-size: cover;
   background-attachment: fixed;*/
-  background: linear-gradient(to bottom, #7e6495, #8c8ccb);
+  
 }
 
 #msg {
@@ -20,6 +20,18 @@ font-weight: 700;
 font-size: 21px;
 line-height: 1.5;
 }
+
+.index-nickname {
+  font-family: Georgia;
+  display: flex; /* Crea un contenitore flessibile per l'icona */
+  align-items: center; /* Allinea verticalmente l'icona al centro */
+  justify-content: center; /* Allinea orizzontalmente l'icona al centro */
+  padding-top: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.5;
+  }
 
 .intest {
   font-family: Arial;
@@ -46,6 +58,7 @@ line-height: 1.5;
 
 .bkg {
   color: #ffffff;
+  background: linear-gradient(to bottom, #7e6495, #8c8ccb);
 }
 
 .container {
@@ -72,6 +85,15 @@ line-height: 1.5;
   /*padding-bottom: 10px;*/
 }
 
+.index-bio {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display: flex; 
+  justify-content: center;
+  /*padding-bottom: 10px;*/
+}
+
 
 .center-icon-container {
   display: flex; /* Crea un contenitore flessibile per l'icona */
@@ -93,4 +115,5 @@ justify-content: center; /* Allinea orizzontalmente l'icona al centro */
 padding-bottom: 20px;
 /*padding-right: 100;*/
 }
+
 
