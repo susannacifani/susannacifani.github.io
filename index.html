@@ -11,13 +11,12 @@
 
   <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" />
   <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3202101259968152"
-     crossorigin="anonymous"></script>
+
 
   <style>
     .bg-custom-color {
       background-color: #9CAF88;
-      height: 280px;
+      
     }
     .custom-link {
       text-decoration: none;
@@ -53,15 +52,233 @@
       .custom-card-small {
         width: 33.33%;
       }
+      /*.custom-offcanvas {
+        width: 70%;
+      }*/
     }
 
+    .square-image {
+      object-fit: cover;
+      width: 100%;
+      height: 0;
+      padding-top: 100%; /* Altezza uguale alla larghezza per ottenere una forma quadrata */
+    }
 
+    
 
 
   </style>
 
 </head>
 <body>
+  <!--
+
+  <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-truncate">
+                  <i class="fa-regular fa-star"></i><span class="ms-1 d-none d-sm-inline">Recensioni</span>
+                </a>
+            </li>
+            <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                  <i class="fa-solid fa-link"></i><span class="ms-1 d-none d-sm-inline">Links</span> </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col min-vh-100 p-4">
+            <!-- toggler -->
+            <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+              <i class="fa-solid fa-bars"></i>
+
+            </button>
+            <h3>Susanna</h3>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  
+                  <div class="bg-custom-color rounded p-3 d-flex align-items-center justify-content-center" style="margin-top: 10px; height: 280px;">
+                    <div class="text-center">
+                      <div style="font-size: 40px;">SUSANNA</div>
+                      <a href="mailto:susannacollab@gmail.com" class="custom-link" style="font-size: 13px;">susannacollab@gmail.com</a>
+                    </div>
+                  </div>
+                  <div class="p-3" style="height: auto;">
+                    <p>Le mie ultime recensioni</p>
+                    <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+          
+                        <div class="carousel-item active">
+                          <div class="row">
+          
+                            <div class="col">
+                              <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
+                              <!--
+                              <div class="carousel-caption">
+                                <h5>Titolo 2</h5>
+                                <p>Descrizione 2</p>
+                              </div>
+                              -->
+                            </div>
+          
+                            <div class="col">
+                              <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="row">
+                            <div class="col">
+                              <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
+                            </div>
+                          </div>
+                        </div>
+          
+          
+                      </div>
+                      <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Precedente</span>
+                      </a>
+                      <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Successivo</span>
+                      </a>
+                    </div>
+          
+          
+          
+                    
+                    <p style="margin-top: 30px;">I miei prodotti preferiti</p>
+                    <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+          
+                        <div class="carousel-item active">
+                          <div class="row">
+          
+                            <div class="col">
+                              <img src="products_img/yesstyle-toner1.webp" class="d-block w-100" alt="Image 2">
+                              <!--
+                              <div class="carousel-caption">
+                                <h5>Titolo 2</h5>
+                                <p>Descrizione 2</p>
+                              </div>
+                              -->
+                            </div>
+          
+                            <div class="col">
+                              <img src="products_img/amazon-shaperx1.jpg" class="d-block w-100" alt="Image 2">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/yesstyle-aquagel1.webp" class="d-block w-100" alt="Image 3">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="row">
+                            <div class="col">
+                              <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
+                            </div>
+                            <div class="col">
+                              <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
+                            </div>
+                          </div>
+                        </div>
+          
+          
+                      </div>
+                      <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Precedente</span>
+                      </a>
+                      <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Successivo</span>
+                      </a>
+                    </div>
+                    <!--<div class="container">
+                      <div class="row">
+                        <div class="col-4 col-md-4 custom-card">
+                          <div class="card shadow d-flex flex-column">
+                            <img src="products_img/amazon-extensions.jpg" class="card-img-top" alt="Immagine 1">
+                            <div class="card-body">
+                              <p class="card-text">Card 1</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-4 custom-card">
+                          <div class="card shadow mb-4 d-flex flex-column">
+                            <img src="products_img/amazon-shaperx1.jpg" class="card-img-top" alt="Immagine 2">
+                            <div class="card-body">
+                              <p class="card-text">Card 2</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-4 custom-card">
+                          <div class="card shadow mb-4 d-flex flex-column">
+                            <img src="products_img/amazon-smartwatch.jpg" class="card-img-top" alt="Immagine 3">
+                            <div class="card-body">
+                              <p class="card-text">Card 3</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> --
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
   <!--
   <div class="container">
     <img src="icons_background/profile-pic.jpeg" width="91" height="91" class="round-img">
@@ -183,7 +400,7 @@
                 <div class="row">
 
                   <div class="col">
-                    <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
+                    <img src="products_img/yesstyle-toner1.webp" class="d-block w-100" alt="Image 2">
                     <!--
                     <div class="carousel-caption">
                       <h5>Titolo 2</h5>
@@ -193,10 +410,10 @@
                   </div>
 
                   <div class="col">
-                    <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
+                    <img src="products_img/amazon-shaperx1.jpg" class="d-block w-100" alt="Image 2">
                   </div>
                   <div class="col">
-                    <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
+                    <img src="products_img/yesstyle-aquagel1.webp" class="d-block w-100" alt="Image 3">
                   </div>
                 </div>
               </div>
@@ -265,6 +482,8 @@
       </div>
     </div>
   </footer>
+
+  
 
 
 </body>
