@@ -52,7 +52,7 @@ line-height: 1.5;
 
 .bkg {
   color: #ffffff;
-  background: linear-gradient(to bottom, #9CAF88, #7d8c6d);
+  background: linear-gradient(to bottom, #9CAF88, #19260b);
 }
 
 .container {
@@ -110,4 +110,30 @@ padding-bottom: 20px;
 /*padding-right: 100;*/
 }
 
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 25%;
+  background-color: #f8f9fa;
+  transition: left 0.3s ease;
+}
+.offcanvas-menu.show {
+  left: 0;
+}
+.offcanvas-body .nav-link {
+  color: black; /* Cambia il colore del testo come desiderato */
+  text-decoration: none; /* Rimuove il sottolineato dei link */
+}
 
+.nav-link i {
+  margin-right: 5px;
+}
+.navbar {
+      height: 80px;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,490 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>susannacifani - Home</title>
-  <link rel="stylesheet" href="main.css">
-  <script src="https://kit.fontawesome.com/dcda5025c9.js" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zySz+0MMLdz1PIPaPhXoxtgHz2+bLY0BauBv//3B" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0IhGg/VE4GgMTf8ew3KzI5muB5zqyO/mU+wnECLK0bj4A5WszgERWZrj4Wf" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>susannacifani - Home</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/dcda5025c9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zySz+0MMLdz1PIPaPhXoxtgHz2+bLY0BauBv//3B" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0IhGg/VE4GgMTf8ew3KzI5muB5zqyO/mU+wnECLK0bj4A5WszgERWZrj4Wf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css"></link>
+    <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        /*sidebsar e tobar*/
+        .offcanvas-menu {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            width: 25%;
+            background-color: #f8f9fa;
+            transition: left 0.3s ease;
+        }
+        .offcanvas-menu.show {
+            left: 0;
+        }
+        .offcanvas-body .nav-link {
+            color: black; /* Cambia il colore del testo come desiderato */
+            text-decoration: none; /* Rimuove il sottolineato dei link */
+        }
 
-  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" />
-  <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+        .nav-link i {
+            margin-right: 5px;
+        }
+        .navbar {
+                height: 80px;
+        }
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
 
+        @media (max-width: 767px) {
+            /*sidebar e tobar*/
+            .offcanvas.offcanvas-start {
+                width: 80%;
 
-  <style>
-    .bg-custom-color {
-      background-color: #9CAF88;
-      
-    }
-    .custom-link {
-      text-decoration: none;
-      /* Rimuove la sottolineatura */
-      color: inherit;
-      /* Mantiene il colore del testo predefinito */
-    }
-    .card {
-      /*border-radius: 10px;*/
-      border-radius: 0%;
-      border: 0px;
-      box-shadow: 0 4px 6px rgb(156, 175, 136, 0.1);
-      /*height: 200px;*/
-      /*width: 100px;*/
-    }
+            }
+            .navbar {
+                height: 80px;
+            }
+            .offcanvas-body {
+                padding-top: 1rem;
+            }
+            /*home*/
+            .custom-card-small {
+                width: 33.33%;
+            }
+        }
 
-    .card-img-top {
-      object-fit: cover;
-      height: 100px;
-      /*width: 100px;*/
-      /*
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;*/
-    }
-    .custom-card-medium {
-      width: 200px;
-      height: 200px;
-    }
+        /*home*/
+        .bg-custom-color {
+        background-color: #9CAF88;
+        
+        }
+        .custom-link {
+        text-decoration: none; /* Rimuove la sottolineatura */
+        color: inherit; /* Mantiene il colore del testo predefinito */
+        }
+        .card {
+        /*border-radius: 10px;*/
+        border-radius: 0%;
+        border: 0px;
+        box-shadow: 0 4px 6px rgb(156, 175, 136, 0.1);
+        /*height: 200px;*/
+        /*width: 100px;*/
+        }
 
-    @media (max-width: 767px) {
-      .custom-card-small {
-        width: 33.33%;
-      }
-      /*.custom-offcanvas {
-        width: 70%;
-      }*/
-    }
-
-    .square-image {
-      object-fit: cover;
-      width: 100%;
-      height: 0;
-      padding-top: 100%; /* Altezza uguale alla larghezza per ottenere una forma quadrata */
-    }
-
-    
-
-
-  </style>
-
+        .card-img-top {
+        object-fit: cover;
+        height: 100px;
+        /*width: 100px;*/
+        /*
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;*/
+        }
+        .custom-card-medium {
+        width: 200px;
+        height: 200px;
+        }
+    </style>
 </head>
 <body>
-  <!--
-
-  <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body px-0">
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
-            <li class="nav-item">
-                <a href="#" class="nav-link text-truncate">
-                  <i class="fa-regular fa-star"></i><span class="ms-1 d-none d-sm-inline">Recensioni</span>
-                </a>
-            </li>
-            <li>
-                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
-                  <i class="fa-solid fa-link"></i><span class="ms-1 d-none d-sm-inline">Links</span> </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-truncate">
-                    <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-                </a>
-                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-truncate">
-                    <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-truncate">
-                    <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col min-vh-100 p-4">
-            <!-- toggler -->
-            <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-              <i class="fa-solid fa-bars"></i>
-
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="icons_background/pupazzetto.jpg" alt="Logo" width="80" height="60">
+                Dua Lipa with the baby
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <i class="fa fa-bars"></i>
             </button>
-            <h3>Susanna</h3>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  
-                  <div class="bg-custom-color rounded p-3 d-flex align-items-center justify-content-center" style="margin-top: 10px; height: 280px;">
-                    <div class="text-center">
-                      <div style="font-size: 40px;">SUSANNA</div>
-                      <a href="mailto:susannacollab@gmail.com" class="custom-link" style="font-size: 13px;">susannacollab@gmail.com</a>
-                    </div>
-                  </div>
-                  <div class="p-3" style="height: auto;">
-                    <p>Le mie ultime recensioni</p>
-                    <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-          
-                        <div class="carousel-item active">
-                          <div class="row">
-          
-                            <div class="col">
-                              <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
-                              <!--
-                              <div class="carousel-caption">
-                                <h5>Titolo 2</h5>
-                                <p>Descrizione 2</p>
-                              </div>
-                              -->
-                            </div>
-          
-                            <div class="col">
-                              <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="row">
-                            <div class="col">
-                              <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
-                            </div>
-                          </div>
-                        </div>
-          
-          
-                      </div>
-                      <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Precedente</span>
-                      </a>
-                      <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Successivo</span>
-                      </a>
-                    </div>
-          
-          
-          
-                    
-                    <p style="margin-top: 30px;">I miei prodotti preferiti</p>
-                    <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-          
-                        <div class="carousel-item active">
-                          <div class="row">
-          
-                            <div class="col">
-                              <img src="products_img/yesstyle-toner1.webp" class="d-block w-100" alt="Image 2">
-                              <!--
-                              <div class="carousel-caption">
-                                <h5>Titolo 2</h5>
-                                <p>Descrizione 2</p>
-                              </div>
-                              -->
-                            </div>
-          
-                            <div class="col">
-                              <img src="products_img/amazon-shaperx1.jpg" class="d-block w-100" alt="Image 2">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/yesstyle-aquagel1.webp" class="d-block w-100" alt="Image 3">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="row">
-                            <div class="col">
-                              <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
-                            </div>
-                            <div class="col">
-                              <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
-                            </div>
-                          </div>
-                        </div>
-          
-          
-                      </div>
-                      <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Precedente</span>
-                      </a>
-                      <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Successivo</span>
-                      </a>
-                    </div>
-                    <!--<div class="container">
-                      <div class="row">
-                        <div class="col-4 col-md-4 custom-card">
-                          <div class="card shadow d-flex flex-column">
-                            <img src="products_img/amazon-extensions.jpg" class="card-img-top" alt="Immagine 1">
-                            <div class="card-body">
-                              <p class="card-text">Card 1</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-4 col-md-4 custom-card">
-                          <div class="card shadow mb-4 d-flex flex-column">
-                            <img src="products_img/amazon-shaperx1.jpg" class="card-img-top" alt="Immagine 2">
-                            <div class="card-body">
-                              <p class="card-text">Card 2</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-4 col-md-4 custom-card">
-                          <div class="card shadow mb-4 d-flex flex-column">
-                            <img src="products_img/amazon-smartwatch.jpg" class="card-img-top" alt="Immagine 3">
-                            <div class="card-body">
-                              <p class="card-text">Card 3</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> --
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title">Menu</h6>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-truncate">
+                        <i class="fa-regular fa-star"></i><span class="ms-1">Recensioni</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="linktree.html" class="nav-link text-truncate">
+                        <i class="fa-solid fa-link"></i><span class="ms-1">Links</span></a>
+                </li>
+                <li>
+                    <a href="linktree.html" class="nav-link text-truncate">
+                        <i class="fs-5 bi-table"></i><span class="ms-1">Orders</span></a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
--->
 
-  <!--
-  <div class="container">
-    <img src="icons_background/profile-pic.jpeg" width="91" height="91" class="round-img">
-  </div>
-  <h1 class="index-nickname">susanna</h1>
-  <a href="mailto:susannacollab@gmail.com" class="index-bio">susannacollab@gmail.com</a>
-  -->
+    <script>
+        var offcanvasMenu = document.getElementById('offcanvasMenu');
+        var navbarToggler = document.querySelector('.navbar-toggler');
 
-  <!-- FUNZIONA
-  <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 1">
-        <div class="carousel-caption">
-          <h5>Titolo 1</h5>
-          <p>Descrizione 1</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="products_img/caudalie-parfume.png" class="d-block w-100" alt="Image 2">
-        <div class="carousel-caption">
-          <h5>Titolo 2</h5>
-          <p>Descrizione 2</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
-        <div class="carousel-caption">
-          <h5>Titolo 3</h5>
-          <p>Descrizione 3</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Precedente</span>
-    </a>
-    <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Successivo</span>
-    </a>
-  </div>
-  -->
-
-
-  
-  
-  
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="bg-custom-color rounded p-3 d-flex align-items-center justify-content-center" style="margin-top: 10px;">
-          <div class="text-center">
-            <div style="font-size: 40px;">SUSANNA</div>
-            <a href="mailto:susannacollab@gmail.com" class="custom-link" style="font-size: 13px;">susannacollab@gmail.com</a>
-          </div>
-        </div>
-        <div class="p-3" style="height: auto;">
-          <p>Le mie ultime recensioni</p>
-          <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-              <div class="carousel-item active">
-                <div class="row">
-
-                  <div class="col">
-                    <img src="products_img/wishful-getclean.png" class="d-block w-100" alt="Image 2">
-                    <!--
-                    <div class="carousel-caption">
-                      <h5>Titolo 2</h5>
-                      <p>Descrizione 2</p>
-                    </div>
-                    -->
-                  </div>
-
-                  <div class="col">
-                    <img src="products_img/yesstyle-sungel1.webp" class="d-block w-100" alt="Image 2">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/yesstyle-sunstick1.webp" class="d-block w-100" alt="Image 3">
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-            <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Precedente</span>
-            </a>
-            <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Successivo</span>
-            </a>
-          </div>
-
-
-
-          
-          <p style="margin-top: 30px;">I miei prodotti preferiti</p>
-          <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-              <div class="carousel-item active">
-                <div class="row">
-
-                  <div class="col">
-                    <img src="products_img/yesstyle-toner1.webp" class="d-block w-100" alt="Image 2">
-                    <!--
-                    <div class="carousel-caption">
-                      <h5>Titolo 2</h5>
-                      <p>Descrizione 2</p>
-                    </div>
-                    -->
-                  </div>
-
-                  <div class="col">
-                    <img src="products_img/amazon-shaperx1.jpg" class="d-block w-100" alt="Image 2">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/yesstyle-aquagel1.webp" class="d-block w-100" alt="Image 3">
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="products_img/yesstyle-coxirserum.webp" class="d-block w-100" alt="Image 4">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/erborian-peeling.png" class="d-block w-100" alt="Image 5">
-                  </div>
-                  <div class="col">
-                    <img src="products_img/amazon-smartwatch.jpg" class="d-block w-100" alt="Image 6">
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-            <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Precedente</span>
-            </a>
-            <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Successivo</span>
-            </a>
-          </div>
-          <!--<div class="container">
-            <div class="row">
-              <div class="col-4 col-md-4 custom-card">
-                <div class="card shadow d-flex flex-column">
-                  <img src="products_img/amazon-extensions.jpg" class="card-img-top" alt="Immagine 1">
-                  <div class="card-body">
-                    <p class="card-text">Card 1</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-md-4 custom-card">
-                <div class="card shadow mb-4 d-flex flex-column">
-                  <img src="products_img/amazon-shaperx1.jpg" class="card-img-top" alt="Immagine 2">
-                  <div class="card-body">
-                    <p class="card-text">Card 2</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-md-4 custom-card">
-                <div class="card shadow mb-4 d-flex flex-column">
-                  <img src="products_img/amazon-smartwatch.jpg" class="card-img-top" alt="Immagine 3">
-                  <div class="card-body">
-                    <p class="card-text">Card 3</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="sticky-footer">
-    <div class="container my-auto">
-      <div class="copyright text-center my-auto">
-        <span style="font-size: 12px; margin-top: 10px;">Copyright &copy; Susanna Cifani</span>
-      </div>
-    </div>
-  </footer>
-
-  
-
-
+        navbarToggler.addEventListener('click', function () {
+            offcanvasMenu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

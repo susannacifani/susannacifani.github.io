@@ -22,8 +22,20 @@
         .offcanvas-menu.show {
             left: 0;
         }
+        .offcanvas-body .nav-link {
+            color: black; /* Cambia il colore del testo come desiderato */
+            text-decoration: none; /* Rimuove il sottolineato dei link */
+        }
+
         .nav-link i {
             margin-right: 5px;
+        }
+        .navbar {
+                height: 80px;
+        }
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
         }
 
         @media (max-width: 767px) {
@@ -47,7 +59,10 @@
 <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">
+                <img src="icons_background/pupazzetto.jpg" alt="Logo" width="80" height="60">
+                Dua Lipa with the baby
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                 <i class="fa fa-bars"></i>
             </button>
