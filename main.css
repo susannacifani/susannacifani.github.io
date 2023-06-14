@@ -3,6 +3,10 @@
   src: url('fonts/Margin-DEMO.otf') format('opentype');
 }
 
+@font-face {
+  font-family: "ShorelinesBold";
+  src: url('fonts/Shorelines-Bold.otf') format('opentype');
+}
 
 #msg {
   font-family: monospace;
