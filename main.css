@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "MarginDemo";
+  src: url('fonts/Margin-DEMO.otf') format('opentype');
+}
+
 
 #msg {
   font-family: monospace;
