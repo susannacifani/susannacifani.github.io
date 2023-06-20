@@ -106,6 +106,9 @@
         .custom-shadow {
             box-shadow: 0 6px 6px rgba(234, 105, 170, 0.2); /* Personalizza l'intensità qui */
         }
+        .expanded-menu {
+          margin-left: 35px;
+        }
     </style>
 </head>
 <body>
@@ -128,49 +131,45 @@
     <!--sidebar-->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-header">
-            <!--<h6 class="offcanvas-title">Menu</h6>-->
-            <p style="font-family: 'MarginDemo', sans-serif; font-size: 40px;">Susanna</p>
+            <!--Title-->
+            <a class="navbar-brand" href="index.html">
+              <p style="font-family: 'MarginDemo', sans-serif; font-size: 40px;">Susanna</p>
+            </a>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body px-0">
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
-                <li class="nav-item">
-                    <a href="review-home.html" class="nav-link text-truncate">
-                        <i class="fa-regular fa-star"></i><span class="ms-1">Recensioni</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="links.html" class="nav-link text-truncate">
-                        <i class="fa-solid fa-link"></i><span class="ms-1">Links</span></a>
-                </li>
+              <li class="nav-item">
+                <a href="#collapseRecensioni" class="nav-link text-truncate" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseRecensioni">
+                  <i class="fa-regular fa-star"></i><span class="ms-1">Recensioni  </span><i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse expanded-menu" id="collapseRecensioni">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a href="review-home.html" class="nav-link text-truncate">
+                        Tutte
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home.html" class="nav-link text-truncate">
+                        Beauty
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home.html" class="nav-link text-truncate">
+                        Tech
+                      </a>
+                    </li>
 
-                <!--
-                <li class="nav-item">
-                  <a href="#collapseRecensioni" class="nav-link text-truncate" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseRecensioni">
-                    <i class="fa-regular fa-star"></i><span class="ms-1">Recensioni ▼</span>
-                  </a>
-                  <div class="collapse" id="collapseRecensioni">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a href="review-home.html" class="nav-link text-truncate">
-                          Tutte
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="review-home.html" class="nav-link text-truncate">
-                          Beauty
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="review-home.html" class="nav-link text-truncate">
-                          Tech
-                        </a>
-                      </li>
+                    
+                  </ul>
+                </div>
+              </li>
 
-                      
-                    </ul>
-                  </div>
-                </li>-->
+              <li>
+                  <a href="links.html" class="nav-link text-truncate">
+                      <i class="fa-solid fa-link"></i><span class="ms-1">Links</span></a>
+              </li>
 
             </ul>
         </div>
