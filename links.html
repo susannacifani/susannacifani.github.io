@@ -108,6 +108,33 @@
     .custom-shadow {
         box-shadow: 0 6px 6px rgba(234, 105, 170, 0.2); /* Personalizza l'intensità qui */
     }
+    /*card immagini quadrate*/
+    .square-card {
+      /*border-radius: 10px;*/
+      border-radius: 10px;
+      border: 0px;
+      box-shadow: 0 4px 6px rgb(156, 175, 136, 0.1);
+      /*height: 200px;*/
+      /*width: 100px;*/
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 100px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      /*width: 100px;*/
+      /*
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;*/
+    }
+    .square-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
   </style>
 
 </head>
@@ -341,6 +368,27 @@
       </div>
     </div>
   
+
+    <div class="row justify-content-center text-center">
+      <h1 class="intest">Beauty</h1>
+      <div class="col-6 col-md-3 col-lg-3">
+        <a href="https://it.caudalie.com/p/420/eau-de-parfum-ange-des-vignes-420.html?q=anges%20de" class="card-link col-12">
+          <div class="square-card shadow d-flex flex-column">
+            <img src="products_img/caudalie-parfume.png" class="card-img-top square-image" alt="Immagine 1">
+            <p class="card-text" style="font-size: 12px;">Caudalìe - Ange des Vignes</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-3">
+        <a href="https://www.sephora.it/p/get-clean---detergente-viso-delicato-schiumoso-660433.html" class="card-link col-12">
+          <div class="square-card shadow d-flex flex-column">
+            <img src="products_img/wishful-getclean.png" class="card-img-top square-image" alt="Immagine 1">
+            <p class="card-text" style="font-size: 12px;">Wishful - Get Clean</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
 
 
     <div class="row justify-content-center align-items-center">
