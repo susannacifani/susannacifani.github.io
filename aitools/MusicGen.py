@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>susannacifani - Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="fonts/Margin-DEMO.otf">
+    <link rel="stylesheet" href="fonts/Shorelines-Bold.otf">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/dcda5025c9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zySz+0MMLdz1PIPaPhXoxtgHz2+bLY0BauBv//3B" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0IhGg/VE4GgMTf8ew3KzI5muB5zqyO/mU+wnECLK0bj4A5WszgERWZrj4Wf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css"></link>
+    <script type="application/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3202101259968152"
+     crossorigin="anonymous"></script>
+    <style>
+        /*sidebar e tobar*/
+        .offcanvas-menu {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            width: 25%;
+            background-color: #f8f9fa;
+            transition: left 0.3s ease;
+        }
+        .offcanvas-menu.show {
+            left: 0;
+        }
+        .offcanvas-body .nav-link {
+            color: black; /* Cambia il colore del testo come desiderato */
+            text-decoration: none; /* Rimuove il sottolineato dei link */
+        }
+
+        .nav-link i {
+            margin-right: 5px;
+        }
+        .navbar {
+                height: 80px;
+        }
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        @media (max-width: 767px) {
+            /*sidebar e tobar*/
+            .offcanvas.offcanvas-start {
+                width: 70%;
+
+            }
+            .navbar {
+                height: 80px;
+            }
+            .offcanvas-body {
+                padding-top: 1rem;
+            }
+            /*home*/
+            .custom-card-small {
+                width: 33.33%;
+            }
+        }
+
+        .expanded-menu {
+          margin-left: 35px;
+        }
+
+
+        /*home*/
+        .bg-custom-color {
+        background-color: #9CAF88;
+        }
+        .bg-custom-image {
+          background-image: url('icons_background/MainSet_Desktop_VesperaPink.jpeg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .custom-link {
+        text-decoration: none; /* Rimuove la sottolineatura */
+        color: inherit; /* Mantiene il colore del testo predefinito */
+        }
+        .card {
+        /*border-radius: 10px;*/
+        border-radius: 0%;
+        border: 0px;
+        box-shadow: 0 4px 6px rgb(156, 175, 136, 0.1);
+        /*height: 200px;*/
+        /*width: 100px;*/
+        }
+
+        .card-img-top {
+        object-fit: cover;
+        height: 100px;
+        /*width: 100px;*/
+        /*
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;*/
+        }
+        .custom-card-medium {
+        width: 200px;
+        height: 200px;
+        }
+
+        .square-image {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1/1;
+        }
+        .custom-shadow {
+            box-shadow: 0 6px 6px rgba(234, 105, 170, 0.2); /* Personalizza l'intensità qui */
+        }
+    </style>
+</head>
+<body>
+    <!--topbar-->
+    <nav class="navbar navbar-light custom-shadow" style="background-color: #ffe3fb;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <!--<img src="icons_background/pupazzetto.jpg" alt="Logo" width="80" height="60">
+                Dua Lipa with the baby-->
+                <p style="font-family: 'MarginDemo', sans-serif; font-size: 40px;">Susanna</p>
+                <!--<p style="font-family: 'ShorelinesBold', sans-serif; font-size: 13px;">/blog</p>-->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+  
+    <!--sidebar-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <!--Title-->
+            <a class="navbar-brand" href="index.html">
+              <p style="font-family: 'MarginDemo', sans-serif; font-size: 40px;">Susanna</p>
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+              <p style="font-family: 'ShorelinesBold'; font-size: 20px; margin-left: 20px; margin-bottom: 0px;">Prodotti</p>
+              <li class="nav-item">
+                <a href="#collapseRecensioni" class="nav-link text-truncate" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseRecensioni">
+                  <i class="fa-regular fa-star"></i><span class="ms-1">Recensioni  </span><i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse expanded-menu" id="collapseRecensioni">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a href="review-home.html" class="nav-link text-truncate">
+                        <b>Tutte</b>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home-beauty.html" class="nav-link text-truncate">
+                        Beauty
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home-fashion.html" class="nav-link text-truncate">
+                        Fashion
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home-jewels.html" class="nav-link text-truncate">
+                        Jewels
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="review-home-tech.html" class="nav-link text-truncate">
+                        Tech
+                      </a>
+                    </li>
+
+                    
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                  <a href="links.html" class="nav-link text-truncate">
+                      <i class="fa-solid fa-link"></i><span class="ms-1">Links</span></a>
+              </li>
+
+              <p style="font-family: 'ShorelinesBold'; font-size: 20px; margin-left: 20px; margin-bottom: 0px; margin-top: 25px;">Consigli</p>
+              <li>
+                <a href="advice/diventare-tester-amazon.html" class="nav-link text-truncate">
+                    <span class="ms-1">Come diventare tester Amazon</span></a>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <!--home-->
+    <div id="page-top" class="container-fluid">
+      <div class="row justify-content-center text-center">
+        <!--
+        <div class="bg-custom-image rounded p-3 d-flex align-items-center justify-content-center" style="margin-top: 10px; margin-bottom: 10px;">
+          <div class="text-center">
+            <div style="font-size: 40px;">SUSANNA</div>
+            <a href="mailto:susannacollab@gmail.com" class="custom-link" style="font-size: 13px;">susannacollab@gmail.com</a>
+          </div>
+        </div>
+        -->
+        <!--Immagine iniziale-->
+        <div class="my-4 position-relative">
+          <img src="icons_background/MainSet_Desktop_VesperaPink.jpeg" class="img-fluid rounded col-sm-6 col-md-12 col-lg-8" alt="Immagine">
+          <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h1 style="font-family: 'MarginDemo', sans-serif; color: white;">Le migliori recensioni e consigli per te</h1>
+          </div>
+        </div>
+        <!--Ultimi articoli
+        <h6>Le mie migliori recensioni</h6>-->
+        <h6>I miei preferiti del momento</h6>
+        <div class="col-4 col-lg-2">
+          <div class="card shadow d-flex flex-column">
+            <a href="https://www.stylevana.com/it_IT/cosrx-low-ph-good-morning-gel-cleanser-1.html" class="card-link col-12">
+              <img src="products_img/stylevana-cosrxgelcleanser.jpg" class="card-img-top square-image" alt="Immagine 1">
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card shadow mb-4 d-flex flex-column">
+            <a href="https://www.stylevana.com/it_IT/numbuz-n-no-3-super-glowing-essence-toner-200ml.html" class="card-link col-12">
+              <img src="products_img/stylevana-numbuzintoner.jpg" class="card-img-top square-image" alt="Immagine 2">
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card shadow mb-4 d-flex flex-column">
+            <a href="https://www.yesstyle.com/en/beauty-of-joseon-matte-sun-stick-18g/info.html/pid.1119542494?rco=SUSANNA01&utm_term=SUSANNA01&utm_medium=Influencer&utm_source=dynamic&mcg=influencer" class="card-link col-12">
+              <img src="products_img/yesstyle-beautyofjoseonsunstick.webp" class="card-img-top square-image" alt="Immagine 3">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--prova
+      <div class="row justify-content-center text-center">
+        <div class="card shadow-none">
+          <a href="reviews/isntree-sungel.html" class="card-link col-12">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4 col-md-4 col-lg-2">
+                  <i class="fa-solid fa-link" style="font-size:40px;"></i><span class="ms-1"></span></a>
+                </div>
+                <div class="col-8 col-md-8 col-lg-4">
+                  <h6 class="card-title">Isntree - Hyaluronic Acid Watery Sun Gel</h6>
+                  <p class="card-text" style="font-size: 10px;">Crema solare a rapido assorbimento, non appiccicosa e con un finish opaco</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>-->
+
+
+
+      <!--Collage-->
+      <div class="row justify-content-center text-center" style="margin-bottom: 30px;">
+        <div class="my-4 position-relative">
+          <h6>Moodboard</h6>
+          <img src="icons_background/moodboard.png" class="img-fluid rounded col-sm-6 col-md-12 col-lg-8" alt="Immagine" style="max-width: 100%;">
+        </div>
+      </div>
+
+    
+
+
+    
+      <!--Social and Footer-->
+      <div class="row justify-content-center text-center" style="background-color: #ffe3fb;">
+        <div class="my-4 position-relative">
+          <div class="container icon-link" style="margin-top: 20px;">
+            <div class="d-flex justify-content-center">
+                <a href="https://instagram.com/susannacifani" class="icon-link mx-3">
+                    <i class="fa-brands fa-instagram" style="font-size:25px;"></i>
+                </a>
+                <a href="mailto:susannacollab@gmail.com" class="icon-link mx-3">
+                  <i class="fa-regular fa-envelope" style="font-size:25px;"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span style="font-size: 12px; margin-top: 10px;">Copyright &copy; Susanna Cifani</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+    <!-- Scroll to Top Button
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>-->
+
+    
+
+
+    <!--
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <p>Moodboard</p>
+        <div class="col-4 col-lg-2">
+          <div class="card d-flex flex-column">
+            <img src="products_img/amazon-extensions.jpg" class="card-img-top square-image" alt="Immagine 1">
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card mb-4 d-flex flex-column">
+            <img src="products_img/amazon-shaperx1.jpg" class="card-img-top square-image" alt="Immagine 2">
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card mb-4 d-flex flex-column">
+            <img src="products_img/amazon-smartwatch.jpg" class="card-img-top square-image" alt="Immagine 3">
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-4 col-lg-2">
+          <div class="card d-flex flex-column">
+            <img src="products_img/amazon-extensions.jpg" class="card-img-top square-image" alt="Immagine 1">
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card mb-4 d-flex flex-column">
+            <img src="products_img/amazon-shaperx1.jpg" class="card-img-top square-image" alt="Immagine 2">
+          </div>
+        </div>
+        <div class="col-4 col-lg-2">
+          <div class="card mb-4 d-flex flex-column">
+            <img src="products_img/amazon-smartwatch.jpg" class="card-img-top square-image" alt="Immagine 3">
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    
+    
+    
+    
+
+
+
+
+    
+
+
+
+
+
+
+    <!--topbar button to open sidebar-->
+    <script>
+        var offcanvasMenu = document.getElementById('offcanvasMenu');
+        var navbarToggler = document.querySelector('.navbar-toggler');
+
+        navbarToggler.addEventListener('click', function () {
+            offcanvasMenu.classList.toggle('show');
+        });
+    </script>
+
+<script type="text/javascript">
+  var infolinks_pid = 3412206;
+  var infolinks_wsid = 0;
+  </script>
+  <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+</body>
+</html>
 
